@@ -26,7 +26,7 @@
             padding: 0.75rem; /* 12px */
         }
         .table-input:focus {
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring-2 focus:ring-blue-500相当 */
+            box-shadow: 0 0 0 2px rgba(106, 163, 215, 1); /* focus:ring-2 focus:ring-blue-500相当 */
             border-radius: 0.375rem; /* rounded-md */
         }
     </style>
@@ -35,14 +35,14 @@
 
     <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-5xl">
         <h1 class="text-xl sm:text-2xl font-bold text-center text-gray-800 mb-6">多角形と内角の和の関係</h1>
-        <p class="text-center text-gray-600 mb-8">test</p>
+        <p class="text-center text-gray-600 mb-8">表を埋めて関係性を見出そう</p>
         
         <!-- テーブルが画面幅を超える場合に横スクロールできるようにします -->
         <div class="overflow-x-auto">
             <table class="w-full min-w-[700px] text-center border-collapse">
                 <thead>
                     <tr class="bg-gray-200 text-sm sm:text-base">
-                        <th class="p-3 sm:p-4 border border-gray-300 font-semibold">特徴</th>
+                        <th class="p-3 sm:p-4 border border-gray-300 font-semibold"></th>
                         <th class="p-3 sm:p-4 border border-gray-300 font-semibold">四角形</th>
                         <th class="p-3 sm:p-4 border border-gray-300 font-semibold">五角形</th>
                         <th class="p-3 sm:p-4 border border-gray-300 font-semibold">六角形</th>
@@ -53,16 +53,34 @@
                 <tbody class="text-gray-700 text-sm sm:text-base">
                     <!-- 頂点の数の行 -->
                     <tr>
-                        <td class="p-3 sm:p-4 border border-gray-300 font-medium bg-gray-50">頂点の数 (n)</td>
-                        <td class="p-0 border border-gray-300"><input type="text" class="table-input" value=""></td>
-                        <td class="p-0 border border-gray-300"><input type="text" class="table-input" value=""></td>
-                        <td class="p-0 border border-gray-300"><input type="text" class="table-input" value=""></td>
+                        <td class="p-3 sm:p-4 border border-gray-300 font-medium bg-gray-50">辺の数</td>
+                        <td class="p-0 border border-gray-300">
+                            <div class="relative">
+                                <input type="text" class="table-input pr-8" value="">
+                                <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-600">本</span>
+                            </div>
+                        </td>
+                        <td class="p-0 border border-gray-300">
+                            <div class="relative">
+                                <input type="text" class="table-input pr-8" value="">
+                                <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-600">本</span>
+                            </div>
+                        </td>
+                        <td class="p-0 border border-gray-300">
+                            <div class="relative">
+                                <input type="text" class="table-input pr-8" value="">
+                                <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-600">本</span>
+                            </div>
+                        </td>
                         <td class="p-3 sm:p-4 border border-gray-300">...</td>
-                        <td class="p-0 border border-gray-300 bg-blue-50"><input type="text" class="table-input" value=""></td>
+                        <td class="p-0 border border-gray-300 bg-blue-50">
+                            <div class="relative">
+                                <input type="text" class="table-input pr-8" value="">
+                                <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-600">本</span>
                     </tr>
                     <!-- 三角形の数の行 -->
                     <tr>
-                        <td class="p-3 sm:p-4 border border-gray-300 font-medium bg-gray-50">1つの頂点からできる<br>三角形の数</td>
+                        <td class="p-3 sm:p-4 border border-gray-300 font-medium bg-gray-50">三角形の個数</td>
                         <td class="p-0 border border-gray-300">
                             <div class="relative">
                                 <input type="text" class="table-input pr-8" value="">
@@ -91,38 +109,17 @@
                     </tr>
                     <!-- 内角の和の行 -->
                     <tr>
-                        <td class="p-3 sm:p-4 border border-gray-300 font-medium bg-gray-50">内角の和</td>
-                        <td class="p-0 border border-gray-300">
-                            <div class="relative">
-                                <input type="text" class="table-input pr-8" value="">
-                                <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-600">°</span>
-                            </div>
-                        </td>
-                        <td class="p-0 border border-gray-300">
-                            <div class="relative">
-                                <input type="text" class="table-input pr-8" value="">
-                                <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-600">°</span>
-                            </div>
-                        </td>
-                        <td class="p-0 border border-gray-300">
-                            <div class="relative">
-                                <input type="text" class="table-input pr-8" value="">
-                                <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-600">°</span>
-                            </div>
-                        </td>
+                        <td class="p-3 sm:p-4 border border-gray-300 font-medium bg-gray-50">内角の和を<br>求める式</td>
+                        <td class="p-0 border border-gray-300"><input type="text" class="table-input" value=""></td>
+                        <td class="p-0 border border-gray-300"><input type="text" class="table-input" value=""></td>
+                        <td class="p-0 border border-gray-300"><input type="text" class="table-input" value=""></td>
                         <td class="p-3 sm:p-4 border border-gray-300">...</td>
-                        <td class="p-0 border border-gray-300 bg-blue-50">
-                            <div class="relative">
-                                <input type="text" class="table-input pr-8" value="">
-                                <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-600">°</span>
-                            </div>
-                        </td>
+                        <td class="p-0 border border-gray-300 bg-blue-50"><input type="text" class="table-input" value=""></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <!-- 計算スクリプトは不要なため削除しました -->
 </body>
 </html>
 
